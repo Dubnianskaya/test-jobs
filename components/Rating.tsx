@@ -10,7 +10,7 @@ export const Rating:FC = () => {
       <ul className="flex justify-center">
         {ratingValues.map((ratio) => (
           <li key={ratio} className="flex items-center">
-          <input id={ratio} type="radio" name="rating" className="hidden"/>
+          <input id={ratio} type="radio" name="rating" className="hidden" value={ratio}/>
           <label htmlFor={ratio} className="flex items-center cursor-pointer" onClick={() => setRating(Number(ratio))}>
             {Number(ratio) <= rating ? <Star className="w-4 mr-1"/> : <StarUnchecked className="w-4 mr-1"/>}
            </label> 
